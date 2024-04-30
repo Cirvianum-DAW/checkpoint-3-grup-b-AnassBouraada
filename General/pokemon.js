@@ -35,13 +35,16 @@ async function mostrarInfoPokemon(id) {
       abilitiesList.appendChild(li);
     });
 
-    console.log(pokemon.sprites);
-
-    spriteElement.src = ;
+    spriteElement.src = pokemon.sprites.front_default;
     spriteElement.alt = pokemon.name;
   } catch (error) {
-    console.error("Error:", error);
+    alert("No hi ha cap pokemon");
   }
 }
 
-mostrarInfoPokemon(4);
+document.getElementById("idpokemon").addEventListener("click", (event) => {
+  event.preventDefault();
+  const idPokemon = document.getElementById("idpokemontext").value;
+  mostrarInfoPokemon(idPokemon);
+  document.getElementById("idpokemontext").value = "";
+});

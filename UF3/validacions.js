@@ -1,7 +1,7 @@
 // A continuació et mostro algunes idees per poder començar a organitzar el teu codi.
 
 // Selecció dels inputs...
-const nameInput = document.querySelector('input[name="name"]');
+const nameInput = document.getElementById("name");
 
 // Si no saps com utilitzar aquestes funcions, pots fer ús de missatges per consol o situar
 // els errors allà on consideris lògic
@@ -28,9 +28,13 @@ function displayError(input, message) {
 function validateName() {
   removeExistingError(nameInput);
   // Validació del nom...
-
-  // Si no és vàlid...
-  displayError(nameInput, "El nom no és vàlid");
+  if (nameInput.value.length < 5) {
+    console.log("2");
+    // Si no és vàlid...
+    displayError(nameInput, "El nom no és vàlid");
+  }
 }
 
 // addEventListeners...
+
+nameInput.addEventListener("blur", validateName);
