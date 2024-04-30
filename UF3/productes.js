@@ -26,9 +26,6 @@ selector.addEventListener("change", () => {
   const quantitat = document.getElementById("quantity");
   quantitat.value = 1;
   const preu = document.getElementById("price");
-  preu.value = products.find((productee) => {
-    if (productee.name === producte.value) {
-      return producte.price;
-    }
-  });
+  const preu1 = products.find((productee) => productee.name === producte.value);
+  preu.value = preu1.price;
 });
