@@ -11,9 +11,24 @@ const products = [
   { category: "Llar", price: 199.99, name: "Aspiradora" },
 ];
 
+const selector = document.getElementById("product");
 
-const selector = document.getElementById('select-movie');
+products.forEach((producte) => {
+  const option = document.createElement("option");
+  console.log(option);
+  option.textContent = producte.name;
+  selector.appendChild(option);
+});
 
-products.forEach(producte => {
-  
+selector.addEventListener("change", () => {
+  const producte = document.getElementById("product");
+  console.log(producte.value);
+  const quantitat = document.getElementById("quantity");
+  quantitat.value = 1;
+  const preu = document.getElementById("price");
+  preu.value = products.find((productee) => {
+    if (productee.name === producte.value) {
+      return producte.price;
+    }
+  });
 });
