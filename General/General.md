@@ -4,7 +4,7 @@
 
 Per tant la nota final d'aquest exercici serà la mateixa per totes les UFs amb la ponderació corresponent a cada UF.
 
-**Important**: En funció de si l'error és més o menys greu, es pot penalitzar amb 0,25p o 0,5p. Finalment hi ha 1 punt global que s'avaluarà en funció de la qualitat del codi, la seva estructura, la seva llegibilitat i els comentaris que hi hagi.
+**Important**: En funció de si l'error és més o menys greu, es pot penalitzar amb 0,25p o 0,5p. Finalment hi ha 1 punt global que s'avaluarà en funció de la qualitat del codi, la seva estructura, la seva llegibilitat <i els comentaris que hi hagi.
 
 ## Repte 1 - Pokemon API (2p)
 
